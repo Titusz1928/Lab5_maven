@@ -41,30 +41,74 @@ public class MainApp {
         Scanner sc=new Scanner(System.in);
         do{
             System.out.println("0=closing program");
-            System.out.println("1=add pereche numar");
-            System.out.println("2=salvare");
-            System.out.println("3=load");
-            System.out.println("4=afisare");
+            System.out.println("1=afisare");
+            System.out.println("2=add pereche numar");
+            System.out.println("3=salvare");
+            System.out.println("4=load");
+            System.out.println("5=numere cons in sir fibo");
+            System.out.println("6=cel mic multiplu comun");
+            System.out.println("7=numere au suma cifrelor egale");
+            System.out.println("8=cele doua numere au același număr de cifre pare");
             ui=sc.nextInt();
             switch (ui){
                 case 1->{
+                    int n=lista.size();
+                    for (int i = 0; i < n; i++) {
+                        System.out.println(lista.get(i));
+                    }
+                }
+                case 2->{
                     System.out.println("a=?");
                     int a=sc.nextInt();
                     System.out.println("b=?");
                     int b=sc.nextInt();
                     lista.add(new PerecheNumere(a,b));
                 }
-                case 2->{
+                case 3->{
                     scriere(lista);
                 }
-                case 3->{
+                case 4->{
                     lista.clear();
                     lista=citire();
                 }
-                case 4->{
-                    int n=lista.size();
-                    for (int i = 0; i < n; i++) {
-                        System.out.println(lista.get(i));
+                case 5->{
+                    System.out.println("care pereche=?");
+                    int ind=sc.nextInt();
+                    if(ind<=lista.size() && ind>=0){
+                        if(lista.get(ind).FiboCons()){
+                            System.out.println("adevarat");
+                        }else{
+                            System.out.println("fals");
+                        }
+                    }
+                }
+                case 6->{
+                    System.out.println("care pereche=?");
+                    int ind=sc.nextInt();
+                    if(ind<=lista.size() && ind>=0){
+                        System.out.println(lista.get(ind).CMMMC());
+                    }
+                }
+                case 7->{
+                    System.out.println("care pereche=?");
+                    int ind=sc.nextInt();
+                    if(ind<=lista.size() && ind>=0){
+                        if(lista.get(ind).sumCifre()){
+                            System.out.println("adevarat");
+                        }else{
+                            System.out.println("fals");
+                        }
+                    }
+                }
+                case 8->{
+                    System.out.println("care pereche=?");
+                    int ind=sc.nextInt();
+                    if(ind<=lista.size() && ind>=0){
+                        if(lista.get(ind).nrCifrePare()){
+                            System.out.println("adevarat");
+                        }else{
+                            System.out.println("fals");
+                        }
                     }
                 }
             }
