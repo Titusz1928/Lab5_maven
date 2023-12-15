@@ -2,6 +2,7 @@ package exemplul1;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -30,6 +31,7 @@ public class MainApp {
     }
     public static void main(String[] args) {
         List<Persoana> persoane=citire();
+        //List<Persoana> persoane=new ArrayList<Persoana>();
         System.out.println(persoane);
         for(Persoana p:persoane){
             System.out.println(p);

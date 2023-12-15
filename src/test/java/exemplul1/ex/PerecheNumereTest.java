@@ -1,5 +1,6 @@
 package exemplul1.ex;
 
+import ex2.PerecheNumere;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

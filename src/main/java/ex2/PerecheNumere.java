@@ -1,4 +1,4 @@
-package exemplul1.ex;
+package ex2;
 
 public class PerecheNumere {
     private int a,b;

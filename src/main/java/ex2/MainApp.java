@@ -1,8 +1,7 @@
-package exemplul1.ex;
+package ex2;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exemplul1.Persoana;
 
 import java.io.File;
 import java.io.IOException;
